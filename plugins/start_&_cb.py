@@ -34,8 +34,8 @@ async def help(client, message):
         ],[
         InlineKeyboardButton('🤖 Update Channel', url='https://t.me/Star_Bots_Tamil'),
         InlineKeyboardButton('👥 Support Group', url='https://t.me/Star_Bots_Tamil_Support')
-        ],[
-        InlineKeyboardButton('⚙️ Settings', callback_data='settings')
+        #],[
+        #InlineKeyboardButton('⚙️ Settings', callback_data='settings')
         ],[
         InlineKeyboardButton('🎛️ About', callback_data='about'),
         InlineKeyboardButton('🏠 Home', callback_data='start')
@@ -95,8 +95,8 @@ async def cb_handler(client, query: CallbackQuery):
                 ],[
                 InlineKeyboardButton("👥 Support Group", url='https://t.me/Star_Bots_Tamil_Support')
                 ],[
-                InlineKeyboardButton("⚙️ Settings", callback_data = "settings")
-                ],[
+               # InlineKeyboardButton("⚙️ Settings", callback_data = "settings")
+               # ],[
                 InlineKeyboardButton("🎛️ About", callback_data = "about"),
                 InlineKeyboardButton("🏠 Home", callback_data = "start")
                 ],[
