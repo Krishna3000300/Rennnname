@@ -1,24 +1,7 @@
-import shlex
 import asyncio
 from typing import Tuple
 from pyrogram.types import Message
 import shutil
-import aiofiles.os
-
-async def execute(cmnd: str) -> Tuple[str, str, int, int]:
-    cmnds = shlex.split(cmnd)
-    process = await asyncio.create_subprocess_exec(
-        *cmnds,
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE
-    )
-    stdout, stderr = await process.communicate()
-    return (
-        stdout.decode('utf-8', 'replace').strip(),
-        stderr.decode('utf-8', 'replace').strip(),
-        process.returncode,
-        process.pid
-    )
 
 def get_media_file_name(message: Message):
     media = (
@@ -107,15 +90,3 @@ def get_thumb_file_id(message: Message):
         return media.thumbs[0].file_id
     else:
         return None
-
-async def rm_dir(root: str = f"/downloads"):
-    try:
-        shutil.rmtree(root)
-    except Exception as e:
-        print(f"Error :- {e}")
-
-async def rm_file(file_path: str):
-    try:
-        await aiofiles.os.remove(file_path)
-    except:
-        pass
