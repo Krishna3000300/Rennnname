@@ -28,7 +28,7 @@ async def set_mode(client, message):
         text = f"**From Now all Files will be Uploaded as Files {FILE_FOLDER}**"
     else:
         await db.set_upload_mode(message.from_user.id, True)
-        text = f"**From Now all Files will be Uploaded as Video ð¥**"
+        text = f"**From Now all Files will be Uploaded as Video 🎥**"
     await message.reply_text(text, quote=True)
 
 @Client.on_message(filters.command("get_mode") & filters.private & filters.incoming)
@@ -37,9 +37,9 @@ async def get_mode(client, message):
     upload_mode = await db.get_upload_mode(user_id)
 
     if upload_mode:
-        text = "**Your current Upload mode :- Video Mode ð¥**"
+        text = "**Your current Upload mode :- Video Mode 🎥**"
     else:
-        text = "**Your Current Upload mode :- File Mode ð**"
+        text = "**Your Current Upload mode :- File Mode 📂**"
 
     await message.reply_text(text, quote=True)
 
@@ -92,7 +92,7 @@ async def refunc(client, message):
         try:
             path = await client.download_media(
                 message=file, file_name=f"downloads/{new_filename}",
-                progress=progress_for_pyrogram, progress_args=("<b>Ã°ÂÂÂ¥ Downloading...</b>", ms, time.time())
+                progress=progress_for_pyrogram, progress_args=("<b>📥 Downloading...</b>", ms, time.time())
             )
         except Exception as e:
             await ms.edit(str(e))
