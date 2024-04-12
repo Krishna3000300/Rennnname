@@ -14,7 +14,7 @@ import time
 import shutil
 import json
 import shlex
-from plugins.utils import get_media_file_name, get_file_attr, rm_dir, execute
+from plugins.utils import get_media_file_name, get_file_attr
 from config import Config
 from typing import Tuple
 
