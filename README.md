@@ -2,13 +2,6 @@
 
 # 𝐑𝐄𝐍𝐀𝐌𝐄 𝐁𝐎𝐓
 
-
-<p align="center"> 🅡🅔🅟🅞 🅢🅣🅐🅣🅢 </p>
-
-
-![github card](https://github-readme-stats.vercel.app/api/pin/?username=Star-Bots-Tamil&repo=2GB-Rename-Bot&theme=dark)
-
-
 ### Sᴀᴍᴩʟᴇ Bᴏᴛ (Official Rename Bot)
 
 <p align="center">
