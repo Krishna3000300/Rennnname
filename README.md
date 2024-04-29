@@ -6,10 +6,10 @@
 <p align="center"> 🅡🅔🅟🅞 🅢🅣🅐🅣🅢 </p>
 
 
-![github card](https://github-readme-stats.vercel.app/api/pin/?username= Star-Bots-Tamil&repo=2GB-Rename-Bot&theme=dark)
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=Star-Bots-Tamil&repo=2GB-Rename-Bot&theme=dark)
 
 
-### Sᴀᴍᴩʟᴇ Bᴏᴛ (Official Pyro Rename Bot)
+### Sᴀᴍᴩʟᴇ Bᴏᴛ (Official Rename Bot)
 
 <p align="center">
 🤖 <a href="https://t.me/Rename_Star_Bot"><img title="Telegram" src="https://telegra.ph/file/8f4626faab4c46ecebf5a.jpg"></a> 🤖
