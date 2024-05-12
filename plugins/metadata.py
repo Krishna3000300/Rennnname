@@ -40,15 +40,9 @@ async def query_metadata(bot: Client, query: CallbackQuery):
     elif data == 'cutom_metadata':
         await query.message.delete()
         try:
-            try:
-                metadata = await bot.ask(text=Txt.SEND_METADATA, chat_id=query.from_user.id, filters=filters.text, disable_web_page_preview=True)
-            except Exception as e:
-                print(e)
-                await query.message.reply_text("⚠️ Error!!\n\n**Request timed out.**\nRestart by using /metadata", reply_to_message_id=query.message.id)
-                return
-            print(metadata.text)
-            Star = await query.message.reply_text("**Please Wait...**", reply_to_message_id=metadata.id)
+            metadata = await bot.ask(text=Txt.SEND_METADATA, chat_id=query.from_user.id, filters=filters.text, disable_web_page_preview=True)
+            Star = await query.message.reply_text("**Please Wait...**", reply_to_message_id=metadata.message_id)
             await db.set_metadata_code(query.from_user.id, metadata_code=metadata.text)
-            await Star.edit("**Your Metadta Code Set Successfully ✅**")
+            await Star.edit("**Your Metadata Code Set Successfully ✅**")
         except Exception as e:
             print(e)
