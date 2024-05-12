@@ -91,6 +91,16 @@ After pay Must Send Screenshot Admin**
 <b>🧑🏻‍💻 Developer :- </b><a href=https://t.me/TG_Karthik><b>Karthik</b></a>
 **Contact me for more info**"""
 
+    SEND_METADATA = """
+❪ SET CUSTOM METADATA ❫
+
+☞ Fᴏʀ Exᴀᴍᴘʟᴇ:-
+
+◦ <code> -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Powered By:- @Rkn_Bots" -metadata author="@RknDeveloper" -metadata:s:s title="Subtitled By :- @Rkn_Bots" -metadata:s:a title="By :- @Rkn_Bots" -metadata:s:v title="By:- @RknDeveloper" </code>
+
+📥 Fᴏʀ Hᴇʟᴘ Cᴏɴᴛ. @Digital_Botz
+"""
+    
     PROGRESS_BAR = """<b>\n
 🚀 Speed :- {3}/sec\n
 💯 Percentage :- {0}%\n
