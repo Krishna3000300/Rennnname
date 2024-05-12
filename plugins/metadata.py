@@ -47,8 +47,8 @@ async def query_metadata(bot: Client, query: CallbackQuery):
                 await query.message.reply_text("⚠️ Error!!\n\n**Request timed out.**\nRestart by using /metadata", reply_to_message_id=query.message.id)
                 return
             print(metadata.text)
-            RknDev = await query.message.reply_text("**Please Wait...**", reply_to_message_id=metadata.id)
+            Star = await query.message.reply_text("**Please Wait...**", reply_to_message_id=metadata.id)
             await db.set_metadata_code(query.from_user.id, metadata_code=metadata.text)
-            await RknDev.edit("**Your Metadta Code Set Successfully ✅**")
+            await Star.edit("**Your Metadta Code Set Successfully ✅**")
         except Exception as e:
             print(e)
