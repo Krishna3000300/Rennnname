@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from helper.database import db
 from pyromod.exceptions import ListenerTimeout
-from config import Config
+from config import Txt
 
 
 TRUE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏɴ', callback_data='metadata_1'),
@@ -42,7 +42,7 @@ async def query_metadata(bot: Client, query: CallbackQuery):
         await query.message.delete()
         try:
             try:
-                metadata = await bot.ask(text=Config.SEND_METADATA, chat_id=query.from_user.id, filters=filters.text, timeout=30, disable_web_page_preview=True)
+                metadata = await bot.ask(text=Txt.SEND_METADATA, chat_id=query.from_user.id, filters=filters.text, timeout=30, disable_web_page_preview=True)
             except ListenerTimeout:
                 await query.message.reply_text("⚠️ Error!!\n\n**Request timed out.**\nRestart by using /metadata", reply_to_message_id=query.message.id)
                 return
