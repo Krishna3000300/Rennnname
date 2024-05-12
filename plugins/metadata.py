@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from helper.database import db
 from pyromod.exceptions import ListenerTimeout
-from config import rkn
+from config import Config
 
 
 TRUE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏɴ', callback_data='metadata_1'),
@@ -17,12 +17,12 @@ FALSE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏғғ', callback_data
 
 @Client.on_message(filters.private & filters.command('metadata'))
 async def handle_metadata(bot: Client, message: Message):
-    RknDev = await message.reply_text("**Please Wait...**", reply_to_message_id=message.id)
+    Star = await message.reply_text("**Please Wait...**", reply_to_message_id=message.id)
     bool_metadata = await db.get_metadata_mode(message.from_user.id)
     user_metadata = await db.get_metadata_code(message.from_user.id)
     if bool_metadata:
-        return await RknDev.edit(f"Your Current Metadata:-\n\n➜ `{user_metadata}` ", reply_markup=InlineKeyboardMarkup(TRUE))
-    return await RknDev.edit(f"Your Current Metadata:-\n\n➜ `{user_metadata}` ", reply_markup=InlineKeyboardMarkup(FALSE))
+        return await Star.edit(f"Your Current Metadata:-\n\n➜ `{user_metadata}` ", reply_markup=InlineKeyboardMarkup(TRUE))
+    return await Star.edit(f"Your Current Metadata:-\n\n➜ `{user_metadata}` ", reply_markup=InlineKeyboardMarkup(FALSE))
 
 
 @Client.on_callback_query(filters.regex('.*?(custom_metadata|metadata).*?'))
@@ -42,7 +42,7 @@ async def query_metadata(bot: Client, query: CallbackQuery):
         await query.message.delete()
         try:
             try:
-                metadata = await bot.ask(text=rkn.SEND_METADATA, chat_id=query.from_user.id, filters=filters.text, timeout=30, disable_web_page_preview=True)
+                metadata = await bot.ask(text=Config.SEND_METADATA, chat_id=query.from_user.id, filters=filters.text, timeout=30, disable_web_page_preview=True)
             except ListenerTimeout:
                 await query.message.reply_text("⚠️ Error!!\n\n**Request timed out.**\nRestart by using /metadata", reply_to_message_id=query.message.id)
                 return
