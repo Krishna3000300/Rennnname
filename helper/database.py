@@ -15,6 +15,8 @@ class Database:
             _id=int(id),
             upload_mode=None,
             file_id=None,
+            metadata_mode=False,
+            metadata_code=""" -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Powered By:- @Star_Bots_Tamil" -metadata author="@U_Karthik" -metadata:s:s title="Subtitled By :- @Star_Moviess_Tamil" -metadata:s:a title="By :- @Star_Moviess_Tamil" -metadata:s:v title="By:- @Star_Moviess_Tamil" """,
             caption=None
         )
 
@@ -60,6 +62,20 @@ class Database:
     async def get_caption(self, id):
         user = await self.col.find_one({'_id': int(id)})
         return user.get('caption', None)
+
+    async def set_metadata_mode(self, id, bool_meta):
+        await self.col.update_one({'_id': int(id)}, {'$set': {'metadata_mode': bool_meta}})
+
+    async def get_metadata_mode(self, id):
+        user = await self.col.find_one({'_id': int(id)})
+        return user.get('metadata_mode', None)
+
+    async def set_metadata_code(self, id, metadata_code):
+        await self.col.update_one({'_id': int(id)}, {'$set': {'metadata_code': metadata_code}})
+
+    async def get_metadata_code(self, id):
+        user = await self.col.find_one({'_id': int(id)})
+        return user.get('metadata_code', None)
 
     async def get_user_data(self, id) -> dict:
         user = await self.col.find_one({'_id': int(id)})
