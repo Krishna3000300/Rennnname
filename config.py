@@ -90,6 +90,16 @@ After pay Must Send Screenshot Admin**
 
 <b>🧑🏻‍💻 Developer :- </b><a href=https://t.me/TG_Karthik><b>Karthik</b></a>
 **Contact me for more info**"""
+
+    SEND_METADATA = """
+❪ SET CUSTOM METADATA ❫
+
+☞ Fᴏʀ Exᴀᴍᴘʟᴇ:-
+
+◦ <code> -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Telegram ~ @DP_BOTZ" -metadata author="@U_Karthik" -metadata:s:s title="Telegram ~ @DP_BOTZ" -metadata:s:a title="Telegram ~ @DP_BOTZ" -metadata:s:v title="Telegram ~ @DP_BOTZ" </code>
+
+📥 Fᴏʀ Hᴇʟᴘ Cᴏɴᴛ. @DP_BOTZ
+"""
     
     PROGRESS_BAR = """<b>\n
 🚀 Speed :- {3}/sec\n
