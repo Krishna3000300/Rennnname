@@ -10,7 +10,7 @@ from helper.database import db
 from asyncio import sleep
 from PIL import Image
 import os
-import time
+import time, asyncio‎
 import shutil
 import json
 import shlex
@@ -71,6 +71,8 @@ async def rename_start(client, message):
 
 @Client.on_message(filters.private & filters.reply)
 async def refunc(client, message):
+    if not os.path.isdir("Metadata"):
+        os.mkdir("Metadata")
     reply_message = message.reply_to_message
     if (reply_message.reply_markup) and isinstance(reply_message.reply_markup, ForceReply):
         new_filename = message.text[:60]
@@ -97,6 +99,25 @@ async def refunc(client, message):
         except Exception as e:
             await ms.edit(str(e))
             return
+
+    _bool_metadata = await db.get_metadata_mode(user_id)
+    if (_bool_metadata):
+        metadata_path = f"Metadata/{new_filename}"
+        metadata = await db.get_metadata_code(user_id)
+        if metadata:
+            await ms.edit("I Fᴏᴜɴᴅ Yᴏᴜʀ Mᴇᴛᴀᴅᴀᴛᴀ\n\n__**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n**Aᴅᴅɪɴɢ Mᴇᴛᴀᴅᴀᴛᴀ Tᴏ Fɪʟᴇ....**")
+            cmd = f"""ffmpeg -i {path} {metadata} {metadata_path}"""
+            process = await asyncio.create_subprocess_shell(cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+            stdout, stderr = await process.communicate()
+            er = stderr.decode()
+            try:
+                if er:
+                    return await ms.edit(str(er) + "\n\n**Error**")
+            except BaseException:
+                pass
+        await ms.edit("**Metadata added to the file successfully ✅**\n\n**Trying to 📤 Uploading...**")
+    else:
+        await ms.edit("**Trying to 📤 Uploading...**")
         
         duration = 0
         try:
@@ -137,24 +158,24 @@ async def refunc(client, message):
         try:
             if upload_mode:
                 await client.send_video(
-                    chat_id=message.chat.id, video=file_path, caption=caption, thumb=ph_path,
+                    chat_id=message.chat.id, video=metadata_path if _bool_metadata else file_path, caption=caption, thumb=ph_path,
                     duration=duration, progress=progress_for_pyrogram,
                     progress_args=("<b>📤 Uploading...</b>", ms, time.time())
                 )
                 # Additional handling for LOG_CHANNEL, modify as needed
                 await client.send_video(
-                    chat_id=LOG_CHANNEL, video=file_path, caption=caption,
+                    chat_id=LOG_CHANNEL, video=metadata_path if _bool_metadata else file_path, caption=caption,
                     thumb=ph_path, duration=duration
                 )
             else:
                 await client.send_document(
-                    chat_id=message.chat.id, document=file_path, thumb=ph_path,
+                    chat_id=message.chat.id, document=metadata_path if _bool_metadata else file_path, thumb=ph_path,
                     caption=caption, progress=progress_for_pyrogram,
                     progress_args=("<b>📤 Uploading...</b>", ms, time.time())
                 )
                 # Additional handling for LOG_CHANNEL, modify as needed
                 await client.send_document(
-                    chat_id=LOG_CHANNEL, document=file_path, thumb=ph_path, caption=caption
+                    chat_id=LOG_CHANNEL, document=metadata_path if _bool_metadata else file_path, thumb=ph_path, caption=caption
                 )
 
         except Exception as e:
