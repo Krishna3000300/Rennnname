@@ -70,6 +70,7 @@ async def rename_start(client, message):
 
 @Client.on_message(filters.private & filters.reply)
 async def refunc(client, message):
+    user_id = message.from_user.id
     if not os.path.isdir("Metadata"):
         os.mkdir("Metadata")
     reply_message = message.reply_to_message
