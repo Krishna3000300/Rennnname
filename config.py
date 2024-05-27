@@ -6,17 +6,17 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "11973721")
     API_HASH  = os.environ.get("API_HASH", "5264bf4663e9159565603522f58d3c18")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6157557700:AAG90-whhrmQeVPWRIc9RNmkk6J0CeEIOfo") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7191444146:AAGaZjMAOsnE1OUA8EzuL_wgR5MbVew96mY") 
    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","Cluster0")     
+    DB_NAME = os.environ.get("DB_NAME","Cluster")     
     DB_URL  = os.environ.get("DB_URL","mongodb+srv://KarthikMovies:KarthikUK007@cluster0.4l5byki.mongodb.net/?retryWrites=true&w=majority")
  
     # other configs
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://graph.org/file/1412d9f93d77c350d8268.jpg")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1391556668 5162208212').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "Star_Bots_Tamil") 
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "solo_levelingtami") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001821439025"))
     DOWNLOAD_DIR = os.environ.get("DOWNLOAD_DIR", "./downloads")
     LOGGER = logging
@@ -90,16 +90,6 @@ After pay Must Send Screenshot Admin**
 
 <b>🧑🏻‍💻 Developer :- </b><a href=https://t.me/TG_Karthik><b>Karthik</b></a>
 **Contact me for more info**"""
-
-    SEND_METADATA = """
-❪ SET CUSTOM METADATA ❫
-
-☞ Fᴏʀ Exᴀᴍᴘʟᴇ:-
-
-◦ <code> -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Powered By:- @Rkn_Bots" -metadata author="@RknDeveloper" -metadata:s:s title="Subtitled By :- @Rkn_Bots" -metadata:s:a title="By :- @Rkn_Bots" -metadata:s:v title="By:- @RknDeveloper" </code>
-
-📥 Fᴏʀ Hᴇʟᴘ Cᴏɴᴛ. @Digital_Botz
-"""
     
     PROGRESS_BAR = """<b>\n
 🚀 Speed :- {3}/sec\n
