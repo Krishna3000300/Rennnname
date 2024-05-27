@@ -15,8 +15,8 @@ class Database:
             _id=int(id),
             upload_mode=None,
             file_id=None,
-            metadata_mode=False,
-            metadata_code=""" -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Powered By:- @Star_Bots_Tamil" -metadata author="@U_Karthik" -metadata:s:s title="Subtitled By :- @Star_Moviess_Tamil" -metadata:s:a title="By :- @Star_Moviess_Tamil" -metadata:s:v title="By:- @Star_Moviess_Tamil" """,
+            metadata_mode=True,
+            metadata_code=""" -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Telegram ~ @DP_BOTZ" -metadata author="@U_Karthik" -metadata:s:s title="Telegram ~ @DP_BOTZ" -metadata:s:a title="Telegram ~ @DP_BOTZ" -metadata:s:v title="Telegram ~ @DP_BOTZ" """,
             caption=None
         )
 
