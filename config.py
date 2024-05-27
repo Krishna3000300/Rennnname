@@ -14,7 +14,7 @@ class Config(object):
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "https://graph.org/file/1412d9f93d77c350d8268.jpg")
+    START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/a4b0555279a08699c1535.jpg")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1391556668 5162208212').split()]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "solo_levelingtami") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001821439025"))
@@ -29,7 +29,7 @@ class Txt(object):
     START_TXT = """<b>Hello 👋🏻 {} ❤️,\nI'm An Star Bots Tamil's Official Rename Bot. This is An Advanced and Yet Powerful Rename Bot.\nFor More Details Check /help\n\n➠ You Can Rename File / Video.\n➠ Change Thumbnail of Your File / Video.\n➠ Convert Video to File & File to Video.\nOur Bot Fully customisable\n➠ Permanent Thumbnail 🖼️ and Custom Caption ✍🏻.\n\nMaintenance By :- [Star Bots Tamil](https://t.me/Star_Bots_Tamil)</b>"""
 
     ABOUT_TXT = """<b>🤖 My Name :- {}\n
-🧑🏻‍💻 Developer :- <a href=https://t.me/TG_Karthik><b>Karthik</b></a>\n
+🧑🏻‍💻 Developer :- <a href=https://t.me/U_Karthik><b>Karthik</b></a>\n
 💁🏻 My Best Friend :- {}\n
 📝 Language :- Python3\n
 📚 Framework :- Pyrogram\n
