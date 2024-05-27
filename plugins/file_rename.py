@@ -9,8 +9,7 @@ from helper.utils import progress_for_pyrogram, convert, humanbytes
 from helper.database import db
 from asyncio import sleep
 from PIL import Image
-import os
-import time, asyncio‎
+import os, time, asyncio
 import shutil
 import json
 import shlex
