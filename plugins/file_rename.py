@@ -19,6 +19,12 @@ from typing import Tuple
 
 LOG_CHANNEL = Config.LOG_CHANNEL
 
+@Client.on_message(filters.text & filters.private)
+def send_text(client, message):
+    user = message.text
+    first_60_letters = user[:60]
+    client.send_message(message.chat.id, f"`{first_60_letters}.mkv`")
+    
 @Client.on_message(filters.command("change_mode") & filters.private & filters.incoming)
 async def set_mode(client, message):
     upload_mode = await db.get_upload_mode(message.from_user.id)
