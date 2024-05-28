@@ -19,7 +19,7 @@ from typing import Tuple
 
 LOG_CHANNEL = Config.LOG_CHANNEL
 
-@Client.on_message(filters.text & filters.private)
+@Client.on_message(filters.text & filters.private & ~filters.command(['start','help','users','broadcast','batch','genlink','stats']))
 def send_text(client, message):
     user = message.text
     first_60_letters = user[:60]
