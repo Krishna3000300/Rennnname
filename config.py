@@ -26,7 +26,7 @@ class Config(object):
 
 class Txt(object):
     # part of text configuration
-    START_TXT = """<b>Hello 👋🏻 {} ❤️,\nI'm An Star Bots Tamil's Official Rename Bot. This is An Advanced and Yet Powerful Rename Bot.\nFor More Details Check /help\n\n➠ You Can Rename File / Video.\n➠ Change Thumbnail of Your File / Video.\n➠ Convert Video to File & File to Video.\nOur Bot Fully customisable\n➠ Permanent Thumbnail 🖼️ and Custom Caption ✍🏻.\n\nMaintenance By :- [Star Bots Tamil](https://t.me/Star_Bots_Tamil)</b>"""
+    START_TXT = """<b>Hello 👋🏻 {} ❤️,\nI'm An Star Bots Tamil's Official Rename Bot. This is An Advanced and Yet Powerful Rename Bot.\nFor More Details Check /help\n\n➠ You Can Rename File / Video.\n➠ Change Thumbnail of Your File / Video.\n➠ Convert Video to File & File to Video.\nOur Bot Fully customisable\n➠ Permanent Thumbnail 🖼️ and Custom Caption ✍🏻.\n\nMaintenance By :- [Solo Leveling Tamil](https://t.me/solo_levelingtami)</b>"""
 
     ABOUT_TXT = """<b>🤖 My Name :- {}\n
 🧑🏻‍💻 Developer :- <a href=https://t.me/U_Karthik><b>Karthik</b></a>\n
@@ -35,8 +35,7 @@ class Txt(object):
 📚 Framework :- Pyrogram\n
 📡 Hosted on :- VPS\n
 💾 Database :- <a href=https://cloud.mongodb.com/>Mongo DB</a>\n
-🎥 Movie Updates :- <a href=https://t.me/Star_Moviess_Tamil><b></b>Star Movies Tamil</a>\n
-🤖 Bot Channel :- <a href=https://t.me/Star_Bots_Tamil><b></b>Star Bots Tamil</a></b>"""
+🎥 Anime Updates :- <a href=https://t.me/solo_levelingtami><b></b>Solo Leveling Tamil</a>"""
 
     HELP_TXT = """**--Available Commands--
     
@@ -73,7 +72,7 @@ class Txt(object):
     
     ⚠️ Contact For Any Problem :- [👥 Support Group](https://t.me/Star_Bots_Tamil_Support)**"""
     
-    HELP_TEXT = "**--Available Commands--\n\n➠ /start :- Check if 😊 I'm Alive\n➠ /help :- How to Use❓\n➠ /about :- to Know About Me 😌\n\n🖼️ --How to Set Thumbnail--\n\n➠ /start The Our Bot And Send Any Photo to Automatically Set Thumbnail 🖼️\n➠ /showthumbnail :- View Current Thumbnail 🖼️\n➠ /deletethumbnail :- Delete 🗑️ Your Thumbnail 🖼️\n\n✍🏻 --How to Set Custom Caption--\n\n➠ /set_caption :- Set Custom Caption ✍🏻\n➠ /see_caption :- View Current Caption ✍🏻\n➠ /del_caption :- Delete 🗑️ Your Caption\nExample :- `/set_caption <b>📁 File Name :- {filename}\n\n💾 File Size :- {filesize}\n\n⏰ Duration :- {duration}</b>`\n\n `/set_caption <b>{filename}</b>`\n\n--How to Change Upload Mode--\n\n➠ /change_mode :- Change Your Upload Mode (File or Video)\n➠ /get_mode :- Get Current Upload Mode\n\n✏️ --How to Rename File--\n\n➠ Send me Any File And Type New File Name\n\n--📂 Supported File Formats--\n\n➠ 📁 Document\n➠ 🎥 Video\n➠ 🎵 Audio\n\n⚠️ Contact For Any Problem :- [👥 Support Group](https://t.me/Star_Bots_Tamil_Support)**"
+    HELP_TEXT = "**--Available Commands--\n\n➠ /start :- Check if 😊 I'm Alive\n➠ /help :- How to Use❓\n➠ /about :- to Know About Me 😌\n\n🖼️ --How to Set Thumbnail--\n\n➠ /start The Our Bot And Send Any Photo to Automatically Set Thumbnail 🖼️\n➠ /showthumbnail :- View Current Thumbnail 🖼️\n➠ /deletethumbnail :- Delete 🗑️ Your Thumbnail 🖼️\n\n✍🏻 --How to Set Custom Caption--\n\n➠ /set_caption :- Set Custom Caption ✍🏻\n➠ /see_caption :- View Current Caption ✍🏻\n➠ /del_caption :- Delete 🗑️ Your Caption\nExample :- `/set_caption <b>📁 File Name :- {filename}\n\n💾 File Size :- {filesize}\n\n⏰ Duration :- {duration}</b>`\n\n `/set_caption <b>{filename}</b>`\n\n--How to Change Upload Mode--\n\n➠ /change_mode :- Change Your Upload Mode (File or Video)\n➠ /get_mode :- Get Current Upload Mode\n\n✏️ --How to Rename File--\n\n➠ Send me Any File And Type New File Name\n\n--📂 Supported File Formats--\n\n➠ 📁 Document\n➠ 🎥 Video\n➠ 🎵 Audio**"
 
     DEV_TXT = """<b><u>Special Thanks & Developer</b></u>
 **You Can pay Any Our Bot's Repo. If you're able to Donate or Buy Our Bot's Repo, please Consider using these Methods:
@@ -88,18 +87,8 @@ Paytm :- `starbotstamil@paytm`
 
 After pay Must Send Screenshot Admin**
 
-<b>🧑🏻‍💻 Developer :- </b><a href=https://t.me/TG_Karthik><b>Karthik</b></a>
+<b>🧑🏻‍💻 Developer :- </b><a href=https://t.me/U_Karthik><b>Karthik</b></a>
 **Contact me for more info**"""
-
-    SEND_METADATA = """
-❪ SET CUSTOM METADATA ❫
-
-☞ Fᴏʀ Exᴀᴍᴘʟᴇ:-
-
-◦ <code> -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Telegram ~ @DP_BOTZ" -metadata author="@U_Karthik" -metadata:s:s title="Telegram ~ @DP_BOTZ" -metadata:s:a title="Telegram ~ @DP_BOTZ" -metadata:s:v title="Telegram ~ @DP_BOTZ" </code>
-
-📥 Fᴏʀ Hᴇʟᴘ Cᴏɴᴛ. @DP_BOTZ
-"""
     
     PROGRESS_BAR = """<b>\n
 🚀 Speed :- {3}/sec\n
@@ -107,4 +96,4 @@ After pay Must Send Screenshot Admin**
 ✅ Done :- {1}\n
 💾 Size :- {2}\n
 ⏰ Time Left :- {4}\n
-©️ [Star Bots Tamil](https://t.me/Star_Bots_Tamil)</b>"""
+©️ [Solo Leveling Tamil](https://t.me/solo_levelingtami)</b>"""
