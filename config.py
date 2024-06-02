@@ -4,20 +4,20 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "11973721")
-    API_HASH  = os.environ.get("API_HASH", "5264bf4663e9159565603522f58d3c18")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7346614704:AAFdLtnYV4bYfqKyR9MHg9CKoGoQ4lbey0E") 
+    API_ID    = os.environ.get("API_ID", "24119778")
+    API_HASH  = os.environ.get("API_HASH", "cca11ca97dd8683d65ca1beb62baceb1")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7415683302:AAGYhFHKKIVGV92ScjyM2_4KFdr263N_8sQ") 
    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","Cluster")     
-    DB_URL  = os.environ.get("DB_URL","mongodb+srv://KarthikMovies:KarthikUK007@cluster0.4l5byki.mongodb.net/?retryWrites=true&w=majority")
+    DB_NAME = os.environ.get("DB_NAME","bikash")     
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://bikash:bikash@bikash.3jkvhp7.mongodb.net/?retryWrites=true&w=majority")
  
     # other configs
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/a4b0555279a08699c1535.jpg")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1391556668 5162208212').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "solo_levelingtami") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001821439025"))
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '7171191819').split()]
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "BOTsHUB_GHOST") 
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002131665412"))
     DOWNLOAD_DIR = os.environ.get("DOWNLOAD_DIR", "./downloads")
     LOGGER = logging
     
