@@ -25,7 +25,7 @@
 
 ## Deploy To Heroku
 
-<a href="https://heroku.com/deploy?template=https://github.com/Star-Bots-Tamil/2GB-Rename-Bot"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
+<a href="https://heroku.com/deploy?template=https://github.com/Krishna3000300/Rennnname"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
 
 
 
